@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
         List<Drawable> data=new ArrayList<>();
 
 
-            Drawable drawable1 = getResources().getDrawable(R.drawable.hanabi1);
+        Drawable drawable1 = getResources().getDrawable(R.drawable.hanabi1);
         Drawable drawable2 = getResources().getDrawable(R.drawable.hanabi2);
-        Drawable drawable5 = getResources().getDrawable(R.drawable.hanabi2);
-        Drawable drawable3 = getResources().getDrawable(R.drawable.hanabi2);
-        Drawable drawable4 = getResources().getDrawable(R.drawable.hanabi2);
+        Drawable drawable3 = getResources().getDrawable(R.drawable.hanabi3);
+        Drawable drawable4 = getResources().getDrawable(R.drawable.hanabi4);
+        Drawable drawable5 = getResources().getDrawable(R.drawable.hanabi5);
             data.add(drawable1);
         data.add(drawable2);
         data.add(drawable3);
