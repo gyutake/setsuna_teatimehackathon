@@ -1,5 +1,6 @@
 package com.example.endouwashin.setsunakengen;
 import android.Manifest;
+import android.app.Dialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -11,6 +12,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.CountDownTimer;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,10 +22,13 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,13 +40,41 @@ import permissions.dispatcher.OnNeverAskAgain;
 import permissions.dispatcher.OnPermissionDenied;
 import permissions.dispatcher.RuntimePermissions;
 
+import static com.example.endouwashin.setsunakengen.R.drawable.abc_text_select_handle_right_mtrl_dark;
 import static com.example.endouwashin.setsunakengen.R.drawable.hanabi1;
 import static com.example.endouwashin.setsunakengen.R.id.list_item;
 import static com.example.endouwashin.setsunakengen.R.id.myImageView;
 
 @RuntimePermissions
 public class MainActivity extends AppCompatActivity {
+    private boolean zoomOut =  false;
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
 
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog);
+        dialog.setTitle("Dialog box");
+        dialog.show();
+        new CountDownTimer(5000, 1000) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void onFinish() {
+                // TODO Auto-generated method stub
+
+                dialog.dismiss();
+            }
+        }.start();
+
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
         data.add(drawable3);
         data.add(drawable4);
         data.add(drawable5);
-
-
 
 
         final Adapter adapter =new Adapter(data);

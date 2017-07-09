@@ -1,0 +1,10 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView android:text="　　　　　　刹那　　　　　　\n\n 写真をみんなにシェアしよう～\n\n　　　　左ボタンー＞更新\n\n　　　　右ボタンー＞送信"
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
