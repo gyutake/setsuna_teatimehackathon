@@ -97,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
         Drawable drawable3 = getResources().getDrawable(R.drawable.hanabi3);
         Drawable drawable4 = getResources().getDrawable(R.drawable.hanabi4);
         Drawable drawable5 = getResources().getDrawable(R.drawable.hanabi5);
-            data.add(drawable1);
+
+        data.add(drawable1);
         data.add(drawable2);
         data.add(drawable3);
         data.add(drawable4);
